@@ -30,16 +30,6 @@ font-size: 20px;
 padding: 10px 20px;
 border: none;
 border-radius: 8px;
-
-}
-
-.cards-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  justify-content: center;
-  width: 1068px;
-  margin: 0 auto;
 }
 
 .product-card {
