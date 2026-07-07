@@ -50,10 +50,10 @@ border-radius: 8px;
   gap: 20px;
   flex-wrap: wrap;
   justify-content:center;
-
 }
-
-
-
-
-
+.div{
+  display: flex;
+  
+}
+.space{
+ margin-left: 2%;}
