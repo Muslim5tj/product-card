@@ -1,6 +1,7 @@
 body{
+ font-family: 'Montserrat', Arial, sans-serif; 
 
-font-family: 'MyCustomFont',Arial,;
+  font-weight: 400; 
   font-size: 13px;
 }
 
@@ -56,10 +57,10 @@ border-radius: 8px;
 }
 .price-box{
   display: flex;
-  
+  justify-content: space-between;
 }
-.space{
- margin-left: 2%;}
+
+
 
 .container {
   
@@ -70,7 +71,3 @@ border-radius: 8px;
   background-position: center top; 
   background-size: cover; 
 }
-@font-face {
-    font-family: 'MyCustomFont';
-    src: url('fonts/Montserrat-MediumItalic.ttf') format('woff2'),
-         url('fonts/Montserrat-Medium.ttf');}
