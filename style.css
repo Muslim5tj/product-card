@@ -5,6 +5,11 @@ font-family: 'Montserrat', sans-serif;
 }
 
 .product-list { 
+body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 13px;
+}
+.product-list{ 
   list-style: none;
   margin: 0;
   padding: 0%;
@@ -20,12 +25,14 @@ font-family: 'Montserrat', sans-serif;
  }
 
 .main-text {
+.main-text{
   color: #515076;
   font-size: 13px;
   line-height: 18px;
 }
 
 .button {
+.button{
   background-color: #515076;
   color: #f8f9fa;
   font-family: 'Courier New', Courier, monospace;
@@ -33,6 +40,9 @@ font-size: 20px;
   padding: 10px 20px;
   border: none;
   border-radius: 8px;
+padding: 10px 20px;
+border: none;
+border-radius: 8px;
 }
 
 .product-card {
@@ -70,3 +80,15 @@ font-size: 20px;
   background-position: center top; 
   background-size: cover; 
 }
+.cards{
+   display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+.price-box{
+  display: flex;
+  
+}
+.space{
+ margin-left: 2%;}
