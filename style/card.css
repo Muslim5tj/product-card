@@ -1,0 +1,16 @@
+.card {
+  background-color: #f7f7fa;
+  width: 100%;
+  padding: 25px;
+}
+
+.card_image {
+  display: block;
+}
+
+.card_category {
+   color: #606074;
+  font-size: 13px;
+  line-height: 18px;
+
+}

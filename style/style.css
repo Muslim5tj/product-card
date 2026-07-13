@@ -1,0 +1,45 @@
+*,
+*::before
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+font-family: 'Montserrat', sans-serif;
+  font-weight: 400; 
+  font-size: 13px;
+}
+
+.title {
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 78px;
+  margin: 0;
+  text-align: center;
+  color: #4c4c84;
+}
+.main-text {
+  color: #606074;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.price-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+ .container {
+  width: 100%;
+  height: 400px; 
+  background-image: url(/images/photo_phone.png);
+  background-repeat: no-repeat; 
+  background-position: center top; 
+  background-size: cover; 
+}
+
+
+
+
+
+
