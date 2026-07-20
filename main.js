@@ -37,7 +37,7 @@ function openGoogle() {
 
 const outputLogButton = document.querySelector('#output-console-log'); 
 
-outputLogButton.addEventListener('click', () => outputConsoleLog('homework 06'))
+outputLogButton.addEventListener('click', () => outputConsoleLog('كُلُّ نَفْسٍ ذَائِقَةُ الْمَوْتِ'))
 
 function outputConsoleLog(message) {
   alert(message)
