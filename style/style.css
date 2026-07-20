@@ -88,7 +88,7 @@ font-family: 'Montserrat', sans-serif;
 
 .btn-changed {
   background-color: beige;
-  color: #515076;          /* Делает текст фиолетовым и читаемым */
-  border-color: beige;     /* Делает рамку бежевой в тон фону */
+  color: #515076;          
+  border-color: beige;     
 }
 
