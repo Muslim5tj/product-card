@@ -1,11 +1,10 @@
-
 const productCards = document.querySelectorAll('.card-container');
 const firstProductCard = document.querySelector('.card-container');
 const changeColorAllCardButton = document.querySelector('#change-color-all-button');
 const changeColorFirstCardButton = document.querySelector('#change-color-first-button');
 const openGoogleButton = document.querySelector('#open-google');
 
-
+ 
 // Цветовые константы
 const redColorHash = '#ff3c00';
 const blackColorHash = '#080809';
@@ -46,12 +45,19 @@ function outputConsoleLog(message) {
 }
 
 //кнопки меняющие цвет
-const buttons = document.querySelectorAll('button');
-buttons.forEach(button => {
-  button.addEventListener('click', () =>{
-    button.classList.toggle('btn-changed');
-  })
-})
+for (let i = 1; i <= 5; i++) {
+  const button = document.getElementById(`colorButton${i}`);
+  
+  if (button) {
+    button.addEventListener('click', () => {
+      // Переключаем класс для смены цвета конкретной кнопки
+      button.classList.toggle('btn-changed');
+      
+      // Выводим сообщение (опционально, можно удалить)
+      console.log(`Товар №${i} добавлен в корзину`);
+    });
+  }
+}
 
 const mainTitle = document.getElementById('main-title');
 
@@ -59,3 +65,4 @@ const mainTitle = document.getElementById('main-title');
 mainTitle.addEventListener('mouseenter', (event) => {
   console.log(event.target.textContent.trim());
 });
+
