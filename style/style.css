@@ -87,8 +87,9 @@ font-family: 'Montserrat', sans-serif;
 }
 
 .btn-changed {
-  background-color: beige;
-  color: #515076;          
-  border-color: beige;     
+  background-color: beige !important;
+  color: #515076 !important;          
+  border-color: beige !important;     
 }
+
 

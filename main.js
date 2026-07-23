@@ -44,20 +44,16 @@ function outputConsoleLog(message) {
   console.log(message);
 }
 
-//кнопки меняющие цвет
-for (let i = 1; i <= 5; i++) {
-  const button = document.getElementById(`colorButton${i}`);
-  
-  if (button) {
-    button.addEventListener('click', () => {
-      // Переключаем класс для смены цвета конкретной кнопки
-      button.classList.toggle('btn-changed');
-      
-      // Выводим сообщение (опционально, можно удалить)
-      console.log(`Товар №${i} добавлен в корзину`);
-    });
-  }
+//кнопка меняющие цвет
+const colorButton = document.getElementById('colorButton1');
+
+if (colorButton) {
+  colorButton.addEventListener('click', () => {
+    colorButton.classList.toggle('btn-changed');
+    console.log('Цвет кнопки успешно изменен');
+  });
 }
+
 
 const mainTitle = document.getElementById('main-title');
 
