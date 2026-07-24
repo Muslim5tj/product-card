@@ -86,10 +86,10 @@ font-family: 'Montserrat', sans-serif;
   padding: 20px
 }
 
-.btn-changed {
-  background-color: beige !important;
-  color: #515076 !important;          
-  border-color: beige !important;     
-}
 
+.btn-changed:not(:disabled) {
+  background-color: beige;
+  color: #515076;          
+  border-color: beige;
+}
 
