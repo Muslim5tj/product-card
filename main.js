@@ -39,6 +39,7 @@ function openGoogle() {
 const outputLogButton = document.querySelector('#output-console-log'); 
 
 outputLogButton.addEventListener('click', () => outputConsoleLog('homework 06'))
+outputLogButton.addEventListener('click', () => outputConsoleLog('كُلُّ نَفْسٍ ذَائِقَةُ الْمَوْتِ'))
 
 function outputConsoleLog(message) {
   alert(message)
@@ -60,9 +61,21 @@ for (let i = 1; i <= 5; i++) {
   }
 }
 
+//кнопка меняющие цвет
+const colorButton = document.getElementById('colorButton1');
+
+if (colorButton) {
+  colorButton.addEventListener('click', () => {
+    colorButton.classList.toggle('btn-changed');
+    console.log('Цвет кнопки успешно изменен');
+  });
+}
+
+
 const mainTitle = document.getElementById('main-title');
 
 
 mainTitle.addEventListener('mouseenter', (event) => {
   console.log(event.target.textContent.trim());
 });
+

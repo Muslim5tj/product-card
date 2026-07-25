@@ -5,7 +5,7 @@
 }
  
 body {
-font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400; 
   font-size: 13px;
 }
@@ -20,10 +20,9 @@ font-family: 'Montserrat', sans-serif;
 }
 
 .card_category {
-   color: #606074;
+  color: #606074;
   font-size: 13px;
   line-height: 18px;
-
 }
 
 .products-list {
@@ -45,7 +44,7 @@ font-family: 'Montserrat', sans-serif;
   flex-direction: column;
   overflow: hidden;
   box-sizing: border-box;
-  padding: 20px 20px 20px 20px;
+  padding: 20px;
 }
 
 .clear-list {
@@ -59,7 +58,7 @@ font-family: 'Montserrat', sans-serif;
   justify-content: space-between;
 }
 
- .container {
+.container {
   width: 100%;
   min-height: 100vh;
   background-image: url('../images/photo_phone.jpg');
@@ -69,10 +68,7 @@ font-family: 'Montserrat', sans-serif;
 }
 
 .block {
-  margin-top: 10px;  
-  margin-bottom: 10px; 
-  margin-left: 10px;  
-  margin-right: 10px;
+  margin: 10px;
 }
 
 .button {
@@ -80,15 +76,23 @@ font-family: 'Montserrat', sans-serif;
   color: #f8f9fa;
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
-  padding: 10px 10px;
+  padding: 10px;
   border: 5px solid #515076;
   border-radius: 10px;
   cursor: pointer;
-    transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  margin-top: auto; /* Кнопка всегда будет внизу карточки */
 }
 
 .btn-changed {
   background-color: beige;
-  color: #515076;          /* Делает текст фиолетовым и читаемым */
-  border-color: beige;     /* Делает рамку бежевой в тон фону */
+  color: #515076;          
+  border-color: beige;     
 }
+
+.btn-changed:not(:disabled) {
+  background-color: beige;
+  color: #515076;          
+  border-color: beige;
+}
+
