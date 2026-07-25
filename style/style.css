@@ -3,14 +3,14 @@
 *::after {
   box-sizing: border-box;
 }
-
+ 
 body {
 font-family: 'Montserrat', sans-serif;
   font-weight: 400; 
   font-size: 13px;
 }
 
-.title {
+.product-title {
   font-size: 70px;
   font-weight: 400;
   line-height: 78px;
@@ -19,49 +19,22 @@ font-family: 'Montserrat', sans-serif;
   color: #4c4c84;
 }
 
-.card {
-  background-color: #f7f7fa;
-  width: 100%;
-  padding: 25px;
-}
-
-.card_image {
-  display: block;
-}
-
 .card_category {
    color: #606074;
   font-size: 13px;
   line-height: 18px;
-
 }
 
-.products {
+.products-list {
   display: flex;
   margin: 0 auto;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  width: 1110px;
+  width: 100%;
 }
 
-.products_item {
-  width: 340px;
-  padding: 25px;
-}
 
-.product-card {
-  width: 340px;
-  flex-shrink: 0;
-  flex-grow: 0;
-  background-color: #f8f9fa;
-  transition: 0.2s;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  box-sizing: border-box;
-  padding: 20px 20px 20px 20px;
-}
 
 .clear-list {
   list-style: none;
@@ -76,18 +49,15 @@ font-family: 'Montserrat', sans-serif;
 
  .container {
   width: 100%;
-  height: 400px; 
-  background-image: url(/images/photo_phone.png);
+  min-height: 100vh;
+  background-image: url('../images/photo_phone.jpg');
   background-repeat: no-repeat; 
   background-position: center top; 
   background-size: cover; 
 }
 
 .block {
-  margin-top: 10px;  
-  margin-bottom: 10px; 
-  margin-left: 10px;  
-  margin-right: 10px;
+  margin: 10px;
 }
 
 .button {
@@ -95,10 +65,31 @@ font-family: 'Montserrat', sans-serif;
   color: #f8f9fa;
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
-  padding: 10px 10px;
-  border: 5px;
+  padding: 10px;
+  border: 5px solid #515076;
   border-radius: 10px;
+  cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: auto;
+}
+
+.card-container {
+  width: 340px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background-color: #f8f9fa;
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 20px
 }
 
 
+.btn-changed:not(:disabled) {
+  background-color: beige;
+  color: #515076;          
+  border-color: beige;
+}
 
