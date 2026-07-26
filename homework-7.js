@@ -35,7 +35,7 @@ function buyProduct(budget) {
     } else {
         
         const missingAmount = productPrice - budget;
-        console.log(`Вам не хватает ${missingAmount}$, пополните баланс`);
+        console.log(`Вам не хватает ${missingAmount}₽, пополните баланс`);
     }
 }
 
