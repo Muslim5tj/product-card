@@ -1,4 +1,4 @@
-*,
+*
 *::before,
 *::after {
   box-sizing: border-box;
@@ -90,9 +90,4 @@ body {
   border-color: beige;     
 }
 
-.btn-changed:not(:disabled) {
-  background-color: beige;
-  color: #515076;          
-  border-color: beige;
-}
 

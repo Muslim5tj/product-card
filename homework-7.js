@@ -52,6 +52,6 @@ const subjectName = 'Таухид';
 let totalLessons = 3;
 let completedLessons = 1;
 
-console.log(`Изучаем предмет: ${subjectName}`);
-console.log(`Всего уроков в курсе: ${totalLessons}`);
-console.log(`Успешно пройдено уроков: ${completedLessons}`);
+console.log(`Изучаем предмет: ₽{subjectName}`);
+console.log(`Всего уроков в курсе: ₽{totalLessons}`);
+console.log(`Успешно пройдено уроков: ₽{completedLessons}`);
