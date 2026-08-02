@@ -9,7 +9,7 @@ const hasSofa = furniture.includes(`Диван`)
 
 console.log( `есть ли Диван в списке?`, hasSofa);
 
-const hasFridge = furniture.includes(`Холодильник`);
+const hasFridge = furniture.includes(`чолодильник`);
 console.log(` есть ли холодильник в списке?`, hasFridge);
 
 //4
@@ -28,35 +28,35 @@ import { socialComments } from "./comments.js";
 
 console.log(socialComments);
 //7
-const comEmails = socialComments.filter(Comment => Comment.email.includes(".com"));
+const comEmails = socialComments.filter(comment => comment.email.includes(".com"));
 
 console.log('комментарии с почтой .com:', comEmails);
 //8
-const updateComments = socialComments.map(Comment => {
-  if (Comment.id <= 5) {
-    return { ...Comment, postId: 2 };
-  }else{ return { ...Comment, postId: 1 };}
+const updateComments = socialComments.map(comment => {
+  if (comment.id <= 5) {
+    return { ...comment, postId: 2 };
+  }else{ return { ...comment, postId: 1 };}
 });
 
 console.log('обновление комментарии:', updateComments);
 //9
-const simplFailedCommets = socialComments.map(Comment => {
+const simplFailedCommets = socialComments.map(comment => {
   return {
-    id: Comment.id,
-    name: Comment.name
+    id: comment.id,
+    name: comment.name
   };
 });
 
 console.log('упрощенные комментарии:', simplFailedCommets);
 //10
-const validatedCommets = socialComments.map(Comment => {
-  const isInvalid = Comment.body.length > 180;
-  return { ...Comment, isInvalid: isInvalid};
+const validatedCommets = socialComments.map(comment => {
+  const isInvalid = comment.body.length > 180;
+  return { ...comment, isInvalid: isInvalid};
 });
 
-console.log('Комментарии с валидацией:', validatedCommets);
+console.log('комментарии с валидацией:', validatedCommets);
 //11
-const emailsMap = socialComments.map(Comment => Comment.email);
+const emailsMap = socialComments.map(comment => comment.email);
 
 console.log('почта через map:', emailsMap);
 
@@ -75,4 +75,4 @@ const emailsStr2 = emailsMap.join(", ");
 console.log('через join с пробелом:', emailsStr2);
 //12/3
 const emailsStr3 = emailsMap.join(" или ");
-console.log('Список почт через "или":', emailsStr3);
+console.log('список почт через "или":', emailsStr3);
