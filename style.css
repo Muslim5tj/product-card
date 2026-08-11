@@ -1,94 +1,125 @@
 body {
-font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400; 
   font-size: 13px;
-}
-
-.product-list { 
-body{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 13px;
-}
-.product-list{ 
-  list-style: none;
   margin: 0;
-  padding: 0%;
+  padding: 0;
 }
 
-.title {  
+/* Шапка/Контейнер с фоном */
+.container {
+  width: 100%;
+  height: 400px; 
+  background-image: url("images/photo_phone.jpg");
+  background-repeat: no-repeat; 
+  background-position: center top; 
+  background-size: cover; 
+}
+
+/* Главный заголовок страницы */
+.product-title {  
   font-size: 70px;
   font-weight: 400;
   line-height: 78px;
-  margin: 0%;
+  margin: 0 0 20px 0;
   text-align: center;
   color: #515076;
- }
-
-.main-text {
-.main-text{
-  color: #515076;
-  font-size: 13px;
-  line-height: 18px;
 }
 
-.button {
-.button{
-  background-color: #515076;
-  color: #f8f9fa;
-  font-family: 'Courier New', Courier, monospace;
-font-size: 20px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-padding: 10px 20px;
-border: none;
-border-radius: 8px;
+/* Блок управления кнопками */
+.block {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
+/* Сетка для карточек (Общий список) */
+.products-list { 
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+/* === БЭМ: Блок Карточки товара === */
 .product-card {
   width: 340px;
-  flex-shrink: 0;
-  flex-grow: 0;
   background-color: #f8f9fa;
   transition: 0.2s;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   box-sizing: border-box;
-  padding: 20px 20px 20px 20px;
-}
-  
-.cards {
-  display: flex;
-  margin: 0 auto;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content:center;
-  width: 1110px;
+  padding: 20px;
+  border-radius: 8px; /* Добавим скругление для красоты */
 }
 
-.price-box {
+/* === БЭМ: Элементы карточки === */
+.product-card__image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.product-card__subtitle {
+  color: #515076;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.product-card__title {
+  font-size: 22px;
+  color: #515076;
+  margin: 0 0 10px 0;
+}
+
+.product-card__description {
+  color: #6c757d;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0 0 15px 0;
+}
+
+.product-card__info-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-card__list {
+  margin: 0 0 15px 0;
+  padding-left: 20px;
+}
+
+.product-card__price-box {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: auto; /* Прижмет цену к низу карточки */
+  margin-bottom: 15px;
 }
 
-.container {
-  width: 100%;
-  height: 400px; 
-  background-image: url( images/photo_phone.png);
-  background-repeat: no-repeat; 
-  background-position: center top; 
-  background-size: cover; 
+.product-card__price-value {
+  font-weight: bold;
+  font-size: 18px;
 }
-.cards{
-   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content:center;
+
+.product-card__button {
+  background-color: #515076;
+  color: #f8f9fa;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
 }
-.price-box{
-  display: flex;
-  
+
+.product-card__button:hover {
+  background-color: #3f3e5c;
 }
-.space{
- margin-left: 2%;}
