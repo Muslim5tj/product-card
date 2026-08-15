@@ -14,21 +14,21 @@ const getCardsCount = () => {
 };
 
 // --- 2. Функция для отрисовки (рендеринга) ---
-const renderProducts = (productsList) => {
-  const productsContainer = document.querySelector(".products-list");
+const renderProducts = (list) => {
+  const container = document.querySelector(".products-list");
 
-  if (!productsContainer) return;
+  if (!container) return;
 
-  productsContainer.innerHTML = "";
+  container.innerHTML = "";
 
-  productsList.forEach((product) => {
+  list.forEach((product) => {
     // Создаем главный контейнер карточки
     const card = document.createElement("div");
     card.classList.add("product-card");
 
     // Картинка
     const img = document.createElement("img");
-    img.src = product.imgUrl;
+    img.src = `/images/${product.imgUrl}.png`;
     img.alt = `товар ${product.title}`;
     img.classList.add("product-card__image");
     card.append(img);
@@ -50,20 +50,12 @@ const renderProducts = (productsList) => {
     compoundContainer.classList.add("product-card__compound");
 
     // Создаем три отдельных состава
-    const line1 = document.createElement("p");
-    line1.style.margin = "0";
-    line1.textContent = product.compound1;
-
-    const line2 = document.createElement("p");
-    line2.style.margin = "0";
-    line2.textContent = product.compound2;
-
-    const line3 = document.createElement("p");
-    line3.style.margin = "0";
-    line3.textContent = product.compound3;
-
-    //контейнер состава
-    compoundContainer.append(line1, line2, line3);
+    product.compounds.forEach((text) => {
+      const line = document.createElement("p");
+      line.style.margin = "0";
+      line.textContent = text;
+      compoundContainer.append(line);
+    });
     card.append(compoundContainer);
 
     // Блок цены
@@ -76,7 +68,7 @@ const renderProducts = (productsList) => {
     const priceValue = document.createElement("span");
     priceValue.classList.add("product-card__price-value");
     
-    priceValue.innerHTML = `${product.price} &#8381;`;
+    priceValue.innerHTML = `${product.price} ₽`;
 
     priceBox.append(priceLabel, priceValue);
     card.append(priceBox);
@@ -88,7 +80,7 @@ const renderProducts = (productsList) => {
     card.append(button);
 
     // Добавляем готовую карточку на страницу
-    productsContainer.appendChild(card);
+    container.appendChild(card);
   });
 };
 
