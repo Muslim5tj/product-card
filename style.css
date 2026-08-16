@@ -58,17 +58,31 @@ body {
   height: 100%; 
 }
 
+/* ИСПРАВЛЕНО: Блок Состава товара */
 .product-card__compound {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden; 
+  display: block;              /* Убрали -webkit-box, чтобы элементы не сжимались в одну строку */
+  list-style-type: disc;       /* Включили стандартные точки-маркеры для списка */
+  padding-left: 20px;          /* Отступ слева, чтобы точки не вылезали за край */
+  margin: 0 0 15px 0;          /* Отступ снизу */
   font-size: 13px;
   line-height: 1.4; 
-  margin-bottom: 10px;
-  height: 54px; /* Строго 3 строки */
+  height: auto;                /* Разрешаем списку занимать естественную высоту */
   min-height: 54px;
+}
+
+/* ДОБАВЛЕНО: Стили для заголовка "Состав:" внутри списка */
+.product-card__compound-label {
+  list-style-type: none;       /* Убираем точку перед словом "Состав:" */
+  margin-left: -20px;          /* Сдвигаем слово левее, чтобы оно стояло ровно */
+  font-weight: bold;           /* Делаем жирным */
+  margin-bottom: 5px;          /* Отступ до первого ингредиента */
+}
+
+/* ДОБАВЛЕНО: Стили для самих ингредиентов */
+.product-card__compound-item {
+  display: list-item;          /* Гарантируем отображение в виде строки с точкой */
+  color: #6c757d;              /* Серый цвет для текста компонентов */
+  margin-bottom: 3px;          /* Расстояние между строчками */
 }
 
 

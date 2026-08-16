@@ -1,6 +1,12 @@
 import { products } from "./products.js";
 
-// --- 1. Функция для получения количества карточек ---
+const productDescriptionsMap = products.reduce((accumulator, product) => {
+  accumulator[product.title] = product.description;
+  return accumulator;
+}, {});
+
+console.log("Результат работы метода .reduce():", productDescriptionsMap);
+
 const getCardsCount = () => {
   const userInput = prompt("Сколько карточек отобразить? От 1 до 5");
   const count = parseInt(userInput, 10);
@@ -13,78 +19,45 @@ const getCardsCount = () => {
   return count;
 };
 
-// --- 2. Функция для отрисовки (рендеринга) ---
 const renderProducts = (list) => {
   const container = document.querySelector(".products-list");
+  const templateCard = document.querySelector(".product-card");
 
-  if (!container) return;
+  if (!container || !templateCard) {
+    console.error("Контейнер или шаблон не найдены в HTML!");
+    return;
+  }
 
   container.innerHTML = "";
 
+  console.log("Отрисовка карточек на странице. Количество:", list.length);
+
   list.forEach((product) => {
-    // Создаем главный контейнер карточки
-    const card = document.createElement("div");
-    card.classList.add("product-card");
+    const card = templateCard.cloneNode(true);
+    card.style.display = "block";
 
-    // Картинка
-    const img = document.createElement("img");
-    img.src = `/images/${product.imgUrl}.png`;
-    img.alt = `товар ${product.title}`;
-    img.classList.add("product-card__image");
-    card.append(img);
+    const img = card.querySelector(".product-card__image");
+    const title = card.querySelector(".product-card__title");
+    const desc = card.querySelector(".product-card__description");
+    const priceValue = card.querySelector(".product-card__price-value");
+    const compoundItems = card.querySelectorAll(".product-card__compound-item");
 
-    // Заголовок
-    const title = document.createElement("h2");
-    title.classList.add("product-card__title");
+    img.src = `images/${product.imgUrl}.png`;
+    img.alt = product.title;
     title.textContent = product.title;
-    card.append(title);
-
-    // Описание
-    const desc = document.createElement("p");
-    desc.classList.add("product-card__description");
     desc.textContent = product.description;
-    card.append(desc);
+    priceValue.textContent = product.price;
 
-    //БЛОК СОСТАВА
-    const compoundContainer = document.createElement("div");
-    compoundContainer.classList.add("product-card__compound");
+    if (compoundItems.length >= 3) {
+      compoundItems[0].textContent = product.compounds[0];
+      compoundItems[1].textContent = product.compounds[1];
+      compoundItems[2].textContent = product.compounds[2];
+    }
 
-    // Создаем три отдельных состава
-    product.compounds.forEach((text) => {
-      const line = document.createElement("p");
-      line.style.margin = "0";
-      line.textContent = text;
-      compoundContainer.append(line);
-    });
-    card.append(compoundContainer);
-
-    // Блок цены
-    const priceBox = document.createElement("div");
-    priceBox.classList.add("product-card__price-box");
-
-    const priceLabel = document.createElement("b");
-    priceLabel.textContent = "Цена";
-
-    const priceValue = document.createElement("span");
-    priceValue.classList.add("product-card__price-value");
-    
-    priceValue.innerHTML = `${product.price} ₽`;
-
-    priceBox.append(priceLabel, priceValue);
-    card.append(priceBox);
-
-    // Кнопка
-    const button = document.createElement("button");
-    button.classList.add("product-card__button");
-    button.textContent = "Купить";
-    card.append(button);
-
-    // Добавляем готовую карточку на страницу
     container.appendChild(card);
   });
 };
 
-// --- 3. Запуск логики ---
 const countToShow = getCardsCount();
 const filteredProducts = products.slice(0, countToShow);
 renderProducts(filteredProducts);
