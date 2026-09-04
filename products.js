@@ -65,3 +65,36 @@ export const products = [
     ]
   }
 ];
+
+const productTemplate = document.getElementById('product-template');
+const productList = document.getElementById('product-list');
+
+products.forEach(product => {
+  const productClone = productTemplate.content.cloneNode(true);
+  
+  productClone.querySelector('.product-card__title').textContent = product.title;
+  productClone.querySelector('.product-card__price-value').textContent = `${product.price} ₽`;
+  productClone.querySelector('.product-card__image').src = `images/${product.imgUrl}.png`;
+  productClone.querySelector('.product-card__image').alt = product.title;
+  productClone.querySelector('.product-card__description').textContent = product.description;
+  
+  const inStockElement = productClone.querySelector('.product-in-stock');
+  if (inStockElement) {
+    inStockElement.textContent = product.inStock ? 'В наличии' : 'Нет в наличии';
+    if (!product.inStock) {
+      inStockElement.style.color = 'red';
+    }
+  }
+
+  const compoundList = productClone.querySelector('.product-card__compound');
+  if (compoundList) {
+    product.compounds.forEach(compound => {
+      const listItem = document.createElement('li');
+      listItem.classList.add('product-card__compound-item');
+      listItem.textContent = compound;
+      compoundList.appendChild(listItem);
+    });
+  }
+
+  productList.appendChild(productClone);
+});

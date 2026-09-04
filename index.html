@@ -13,49 +13,31 @@
 </head>
 
 <body class="container">
-
+  
   <h1 id="main-title" class="product-title">Выбери свой продукт</h1>
 
-  <div class="block">
-    <!-- Кнопки управления (ДЗ 7-8) -->
-    <button id="change-color-all-button">Покрасить все</button>
-    <button id="change-color-first-button">Покрасить первую</button>
-    <button id="open-google">click open google.com</button>
-    <button id="output-console-log">вывести сообщение в консоль лог</button>
+ <div class="block">
+  <div id="product-list" class="products-list"></div>
+</div>
 
-    <!-- Основной список товаров (ДЗ 10) -->
-    <div class="products-list">
-
-      <!-- Шаблон карточки, который будем заполнять через JS -->
-      <div class="product-card" style="display: none;">
-        <img src="" alt="" class="product-card__image" />
-        <h2 class="product-card__title"></h2>
-        <p class="product-card__description"></p>
-
-        <ul class="product-card__compound">
-    <li class="product-card__compound-label"><strong>Состав:</strong></li>
-
-
-
-    <!-- Три пустые строчки для наших трех ингредиентов -->
-    <li class="product-card__compound-item"></li>
-    <li class="product-card__compound-item"></li>
-    <li class="product-card__compound-item"></li>
-</ul>
-
-
-        <div class="product-card__price-box">
-          <b>Цена</b>
-          <!-- Используем правильный спецсимвол рубля -->
-          <span class="product-card__price-value"></span> &#8381;
-        </div>
-
-        <button class="product-card__button">Купить</button>
-      </div>
-
-    </div> <!-- Конец products-list -->
-  </div> <!-- Конец block -->
-
-  <!-- Подключаем дз10.JS-файл -->
+<template id="product-template">
+  <div class="product-card">
+    <img class="product-card__image" src="" alt="">
+    <h3 class="product-card__title"></h3>
+    <p class="product-card__description"></p>
+    <p class="product-card__subtitle product-in-stock"></p>
+    
+    <ul class="product-card__compound">
+      <li class="product-card__compound-label"><strong>Состав:</strong></li>
+      
+    </ul>
+    
+    <div class="product-card__price-box">
+      <span class="product-card__price-value"></span>
+      <button class="product-card__button">В корзину</button>
+    </div>
+  </div>
+</template>
   <script type="module" src="homework-10.js"></script>
 </body>
+</html>
