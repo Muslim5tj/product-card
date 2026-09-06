@@ -1,10 +1,10 @@
 import { products } from "./products.js";
 
-const productDescriptions = products.reduce((accumulator, product) => {
-  accumulator.push({
+const productDescriptions = products.reduce((acc, product) => {
+  acc.push({
   [product.title]: product.description  
   });
-  return accumulator;
+  return acc;
 }, []);
 
 console.log ("результат работы метода .reduce():", productDescriptions);
