@@ -6,38 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="container">
-  
+
   <h1 id="main-title" class="product-title">Выбери свой продукт</h1>
 
- <div class="block">
-  <div id="product-list" class="products-list"></div>
-</div>
-
-<template id="product-template">
-  <div class="product-card">
-    <img class="product-card__image" src="" alt="">
-    <h3 class="product-card__title"></h3>
-    <p class="product-card__description"></p>
-    <p class="product-card__subtitle product-in-stock"></p>
-    
-    <ul class="product-card__compound">
-      <li class="product-card__compound-label"><strong>Состав:</strong></li>
-      
-    </ul>
-    
-    <div class="product-card__price-box">
-      <span class="product-card__price-value"></span>
-      <button class="product-card__button">В корзину</button>
-    </div>
+  <div class="block">
+    <div id="product-list" class="products-list"></div>
   </div>
-</template>
+
+  <template id="product-template">
+    <div class="product-card">
+      <img class="product-card__image" src="" alt="">
+      <h3 class="product-card__title"></h3>
+      <p class="product-card__description"></p>
+      <p class="product-card__subtitle product-in-stock"></p>
+      <ul class="product-card__compound">
+        <li class="product-card__compound-label"><strong>Состав:</strong></li>
+      </ul>
+      <div class="product-card__price-box">
+        <span class="product-card__price-value"></span>
+        <button class="product-card__button">В корзину</button>
+      </div>
+    </div>
+  </template>
+
   <script type="module" src="homework-10.js"></script>
+
 </body>
+
 </html>

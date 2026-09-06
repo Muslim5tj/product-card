@@ -1,11 +1,13 @@
 import { products } from "./products.js";
 
-const productDescriptionsMap = products.reduce((accumulator, product) => {
-  accumulator[product.title] = product.description;
+const productDescriptions = products.reduce((accumulator, product) => {
+  accumulator.push({
+  [product.title]: product.description  
+  });
   return accumulator;
-},{});
+}, []);
 
-console.log ("результат работы метода .reduce():", productDescriptionsMap);
+console.log ("результат работы метода .reduce():", productDescriptions);
 
 const getCardsCount = () => {
   const userInput = prompt("Сколько карточек отобразить? от 1 до 5");
