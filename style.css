@@ -136,6 +136,21 @@ body {
   color: #515076;
 }
 
+.product-card__price-label {
+  width: 56px;
+  height: 24px;
+  top: 932px;
+  left: 495px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #515076;
+  margin-right: 5px; 
+}
+
 .product-card__button {
   background-color: #515076;
   color: #f8f9fa;

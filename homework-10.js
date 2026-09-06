@@ -1,9 +1,7 @@
 import { products } from "./products.js";
 
 const productDescriptions = products.reduce((acc, product) => {
-  acc.push({
-  [product.title]: product.description  
-  });
+  acc.push({ [product.title]: product.description });
   return acc;
 }, []);
 
