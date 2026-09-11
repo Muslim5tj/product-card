@@ -111,7 +111,7 @@ body {
 .product-card__compound-label {
   list-style-type: none; 
   margin-left: -20px;  
-  font-weight: bold;  
+   font-weight: bold; 
   margin-bottom: 5px; 
   color: #606074;
 }
