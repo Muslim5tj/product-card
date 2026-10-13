@@ -218,7 +218,7 @@ body {
   margin-bottom: 20px;
 }
 
-.footer__title-link{
+.footer__title-link {
   text-align: right;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
@@ -249,13 +249,13 @@ body {
   margin-bottom: 5px;
 }
 
-.footer__copyright  {
+.footer__copyright {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   text-align: center;
-  margin-top: 30px;  
+  margin-top: 30px;
   color: hsl(0, 17%, 93%);
 }
 
