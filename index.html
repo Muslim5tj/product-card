@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="container">
@@ -62,13 +62,14 @@
       </ul>
       </nav>
     </div>
-    <p class="footer__copyright"><a href="#" class="footer__color">www.product-cards.com©all right reserve</a></p>
+    <p class="footer__copyright"><a href="#" class="footer__color">://product-cards.com©all right reserve</a></p>
   </footer>
 
-  <button class="btn-reg" type="button" id="modal-open">Регистрация</button>
-  <div class="overlay"></div>
-  <div class="modal__white-phone"></div>
   
+
+  <button class="btn-reg" type="button" id="modal-open">Регистрация</button>
+ <div class="overlay"></div>
+<div class="modal__white-phone"></div>
   <div id="modal" class="modal">
     <div class="modal__content">
       <button id="modal-close" class="modal__close">&times;</button>
@@ -89,36 +90,20 @@
         <label for="modal-login">логин:</label>
         <input type="text" id="modal-login" name="login" required placeholder="введите логин">
         <label for="modal-password">пароль:</label>
-        <input type="password" id="modal-password" name="password" required placeholder="введите пароль">
-        <label for="modal-password-confirm">подтвердить пароль:</label>
-        <input type="password" id="modal-password-confirm" name="password-confirm" required placeholder="подтвердите пароль">
+       <input type="password" id="modal-password" name="password" required placeholder="введите пароль">
+       <label for="modal-password-confirm">подтвердить пароль:</label>
+       <input type="password" id="modal-password-confirm" name="password-confirm" required placeholder="подтвердите пароль">
+
 
         <button type="submit" class="modal__submit">Отправить</button>
       </form>
 
+    
+
     </div>
   </div>
 
-  <script type="module" src="homework-11.js"></script>
-
-  <template id="product-template">
-    <div class="product-card">
-      <img class="product-card__image" src="" alt="">
-      <h3 class="product-card__title"></h3>
-      <p class="product-card__description"></p>
-      <p class="product-card__subtitle product-in-stock"></p>
-      <ul class="product-card__compound">
-        <li class="product-card__compound-label">Состав:</li>
-      </ul>
-      <div class="product-card__price-box">
-        <span class="product-card__price-label">Цена:</span>
-        <span class="product-card__price-value"></span>
-        <button class="product-card__button">В корзину</button>
-      </div>
-    </div>
-  </template>
-
-  <script type="module" src="homework-10.js"></script>5
+ <script type="module" src="homework-11.js"></script>
 
 </body>
 

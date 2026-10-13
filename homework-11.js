@@ -1,35 +1,58 @@
+
 let user = null;
+
 
 const modal = document.getElementById('modal');
 const openBtn = document.getElementById('modal-open');
 const closeBtn = document.getElementById('modal-close');
 const overlay = document.querySelector('.overlay');
 
-openBtn.addEventListener('click', () => {
+function openModal() {
   modal.classList.add('modal-showed');
   overlay.classList.add('overlay-showed');
-});
+  document.body.style.overflow = 'hidden';
+}
 
-closeBtn.addEventListener('click', () => {
+function closeModal() {
   modal.classList.remove('modal-showed');
   overlay.classList.remove('overlay-showed');
+  document.body.style.overflow = '';
+}
+
+openBtn.addEventListener('click', openModal);
+
+closeBtn.addEventListener('click', closeModal);
+
+
+overlay.addEventListener('click', closeModal);
+
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && modal.classList.contains('modal-showed')) {
+    closeModal();
+  }
 });
 
-overlay.addEventListener('click', () => {
-  modal.classList.remove('modal-showed');
-  overlay.classList.remove('overlay-showed');
-});
+
 
 const subscribeForm = document.getElementById('subscribe-form');
 const subscribeInput = document.getElementById('footer-email');
 
 subscribeForm.addEventListener('submit', (event) => {
+ 
   event.preventDefault();
+  
+  
   const emailValue = subscribeInput.value;
-  console.log({ email: emailValue });
-});
+  
 
+  if (subscribeForm.checkValidity()) {
+    console.log({ email: emailValue });
+    
+  }
+});
 const modalForm = document.getElementById('modal-form');
+
 modalForm.addEventListener('submit', (event) => {
   event.preventDefault();
 
@@ -42,31 +65,35 @@ modalForm.addEventListener('submit', (event) => {
   const passwordValue = document.getElementById('modal-password').value;
   const passwordconfirmValue = document.getElementById('modal-password-confirm').value;
 
-  if (passwordValue !== passwordconfirmValue) {
-    alert('пароли не совпадают');
-  } else {
-    if (!modalForm.checkValidity()) {
-      alert('заполните все поля правильно!');
-    } else {
 
-      const userData = {
-        lastname: lastnameValue,
-        name: nameValue,
-        date: dateValue,
-        numberphone: numberphoneValue,
-        email: emailValue,
-        login: loginValue,
-        password: passwordValue,
-        createdOn: new Date(),
-      };
-      user = userData;
-
-      console.log(user);
-
-      modalForm.reset();
-
-      modal.classList.remove('modal-showed');
-      overlay.classList.remove('overlay-showed');
-    }
+  
+  if (!modalForm.checkValidity()) {
+    alert('Заполните все поля правильно!');
+    return; 
   }
+  
+ 
+  if (passwordValue !== passwordconfirmValue) {
+    alert('Пароли не совпадают!');
+    return;
+  }
+  
+  const userData = {
+    lastname: lastnameValue,
+    name: nameValue,
+    date: dateValue,
+    numberphone: numberphoneValue,
+    email: emailValue,
+    login: loginValue,
+    password: passwordValue,
+    createdOn: new Date(),
+  };
+
+  user = userData;
+
+  console.log(user);
+
+  modalForm.reset();
+  
+  closeModal();
 });
