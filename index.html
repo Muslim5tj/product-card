@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
@@ -36,7 +36,74 @@
     </div>
   </template>
 
-  <script type="module" src="homework-10.js"></script>5
+  <footer class="footer">
+    <div class="footer__about">
+      <h3 class="footer__title">Product Cards</h3>
+      <p class="footer__text">у Нас Самые Лучшие Продукты Для Кожи</p>
+      <div class="footer__socials">
+        <a href="#" class="footer__social-link"><img src="images/icons8-telegram-50.png" alt="telegram"></a>
+        <a href="#" class="footer__social-link"><img src="images/icons8-vk-48.png" alt="VK"></a>
+      </div>
+    </div>
+    <div class="footer__subscribe">
+      <h3 class="footer__title-link">Подпишись на наши акции</h3>
+      <form id="subscribe-form">
+        <input type="email" id="footer-email" placeholder="Введи Email...">
+        <button type="submit" class="footer__button">подписаться</button>
+       </form>
+    </div>
+    <div class="footer__link">
+      <nav class="footer__nav">        
+      <h3 class="footer__title-link">Быстрые ссылки</h3>
+      <ul class="footer__list">
+        <li class="footer__list-item"><a href="#">главная</a></li>
+        <li class="footer__list-item"><a href="#">Магазин</a></li>
+        <li class="footer__list-item"><a href="#">Контакты</a></li>
+      </ul>
+      </nav>
+    </div>
+    <p class="footer__copyright"><a href="#" class="footer__color">://product-cards.com©all right reserve</a></p>
+  </footer>
+
+  
+
+  <button class="btn-reg" type="button" id="modal-open">Регистрация</button>
+ <div class="overlay"></div>
+<div class="modal__white-phone"></div>
+  <div id="modal" class="modal">
+    <div class="modal__content">
+      <button id="modal-close" class="modal__close">&times;</button>
+     
+      <h2 class="modal__title">Регистрация</h2>
+       
+      <form id="modal-form" class="modal__form">
+        <label for="modal-lastname">фамилия:</label>
+        <input type="text" id="modal-lastname" name="lastname" required placeholder="введите фамилию">
+        <label for="modal-name">имя:</label>
+        <input type="text" id="modal-name" name="name" required placeholder="введите имя">
+        <label for="modal-date">дата рождения:</label>
+        <input type="date" id="modal-date" name="date" required placeholder="введите дату рождения">
+        <label for="modal-numberphone">номер телефона:</label>
+        <input type="tel" id="modal-numberphone" name="numberphone" required placeholder="введите номер телефона">
+        <label for="modal-email">майл:</label>
+        <input type="email" id="modal-email" name="email" required placeholder="введите email">
+        <label for="modal-login">логин:</label>
+        <input type="text" id="modal-login" name="login" required placeholder="введите логин">
+        <label for="modal-password">пароль:</label>
+       <input type="password" id="modal-password" name="password" required placeholder="введите пароль">
+       <label for="modal-password-confirm">подтвердить пароль:</label>
+       <input type="password" id="modal-password-confirm" name="password-confirm" required placeholder="подтвердите пароль">
+
+
+        <button type="submit" class="modal__submit">Отправить</button>
+      </form>
+
+    
+
+    </div>
+  </div>
+
+ <script type="module" src="homework-11.js"></script>
 
 </body>
 
